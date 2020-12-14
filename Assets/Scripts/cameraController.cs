@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraController : MonoBehaviour {
 
 	private GameObject Player;
-	private VCarController RR;
+	private VCarController VCar;
 	public GameObject cameralookAt,cameraPos;
 	private float speed = 5;
 	[Range (0, 50)] public float smothTime = 15;
@@ -13,7 +13,7 @@ public class cameraController : MonoBehaviour {
 	private void Start()
 	{
 		Player = GameObject.FindGameObjectWithTag ("Player");
-		RR = Player.GetComponent<VCarController> ();
+		VCar = Player.GetComponent<VCarController> ();
 	}
 
 	private void FixedUpdate()
@@ -22,7 +22,7 @@ public class cameraController : MonoBehaviour {
 	}
 	private void follow()
 	{
-		speed = RR.KPH / smothTime;
+		speed = VCar.KPH / smothTime;
 		gameObject.transform.position = Vector3.Lerp (transform.position, cameraPos.transform.position ,  Time.deltaTime * speed);
 		gameObject.transform.LookAt (cameralookAt.gameObject.transform.position);
 	}
