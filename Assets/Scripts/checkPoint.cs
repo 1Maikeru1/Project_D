@@ -35,8 +35,7 @@ public class checkPoint : MonoBehaviour
 			{
 				gameMenu.CSave.sv.coins = gameMenu.CSave.sv.coins + 100;
 				gameMenu.coinKol.text = "100";
-			}
-			if(gameMenu.kol>2 && gameMenu.kol<5)
+			}else if(gameMenu.kol>2 && gameMenu.kol<5)
 			{
 				gameMenu.CSave.sv.coins = gameMenu.CSave.sv.coins + 50;
 				gameMenu.coinKol.text = "50";
@@ -65,6 +64,10 @@ public class checkPoint : MonoBehaviour
 			{
 				if((bool)panel1.activeInHierarchy)
 				{
+					for(double j = 0.01; j < 0.35; j+=0.05)
+					{
+						Invoke("timeFin", (float)j);
+					}
 					panel1.SetActive(false);
 					panel2.SetActive(true);
 					gameMenu.klipText.text = $"Клипы {gameMenu.kol.ToString()}/6";

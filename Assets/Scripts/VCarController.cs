@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 
 [System.Serializable]
@@ -26,14 +25,25 @@ public class VCarController : MonoBehaviour
 	[Range(0,1)]
 	public float steerHelp = 0;
 	public float KPH;
-	public Text kph;
+
+	private float wheelsRPM, lastValue, totalPower;
+	public float maxRPM , minRPM;
+	public float[] gears;
+	public float[] gearChangeSpeed;
+	public AnimationCurve enginePower;
+	public int gearNum = 1;
+	[HideInInspector]public float engineRPM;
+	[HideInInspector]public bool test; //engine sound boolean
+	[HideInInspector]public bool reverse = false;
+	private bool flag=false;
+	
 
 	public float minSpeedForSmoke;
 	public float minAngleForSmoke;
 	public ParticleSystem [] tireSmokeEffects;
 
-	float horInput;
-	float verInput;
+	public float horInput;
+	public float verInput;
 	bool brakeBtn;
 	Quaternion startHelmRotation;
 
@@ -57,7 +67,7 @@ public class VCarController : MonoBehaviour
 		Accelerate();
 		EmitSmokeFromTires();
 		steerHelpAssist();
-		kph.text = KPH.ToString("0");
+		calculateEnginPower();
 	}
 
 	void Accelerate()
@@ -149,5 +159,68 @@ public class VCarController : MonoBehaviour
 			ParticleSystem.EmissionModule psEm = ps.emission;
 			psEm.enabled = _enable;
 		}
+	}
+
+	private void calculateEnginPower()
+	{
+		wheelRPM();
+		if (verInput != 0 ){
+			rb.drag = 0.005f; 
+		}
+		if (verInput == 0){
+			rb.drag = 0.1f;
+		}
+		totalPower = 3.6f * enginePower.Evaluate(engineRPM) * (verInput);
+
+		float velocity  = 0.0f;
+		if (engineRPM >= maxRPM || flag ){
+			engineRPM = Mathf.SmoothDamp(engineRPM, maxRPM - 500, ref velocity, 0.05f);
+
+			flag = (engineRPM >= maxRPM - 450)?  true : false;
+			test = (lastValue > engineRPM) ? true : false;
+		}
+		else {
+			engineRPM = Mathf.SmoothDamp(engineRPM,1000 + (Mathf.Abs(wheelsRPM) * 3.6f * (gears[gearNum])), ref velocity , 0.09f);
+			test = false;
+		}
+		if (engineRPM >= maxRPM + 1000) engineRPM = maxRPM + 1000; // clamp at max
+		shifter();
+	}
+
+	private void wheelRPM()
+	{
+		float sum = 0;
+		int R = 0;
+		for(int i = 0; i<4; i++)
+		{
+			sum += wheelColliders[i].rpm;
+			R++;
+		}
+		wheelsRPM = (R != 0) ? sum/R : 0;
+
+		if(wheelsRPM < 0 && !reverse ){
+			reverse = true;
+		}
+		else if(wheelsRPM > 0 && reverse){
+			reverse = false;
+		}
+	}
+
+	private bool checkGears(){
+		if(KPH >= gearChangeSpeed[gearNum] ) return true;
+		else return false;
+	}
+
+	private void shifter()
+	{
+		if(!onGround)return;
+			//automatic
+		if(engineRPM > maxRPM && gearNum < gears.Length-1 && !reverse && checkGears() ){
+			gearNum ++;
+		}
+		if(engineRPM < minRPM && gearNum > 0){
+			gearNum --;
+		}
+
 	}
 }

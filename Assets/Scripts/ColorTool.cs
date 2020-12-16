@@ -26,7 +26,7 @@ public class ColorTool : MonoBehaviour
 
 	public void buyColor()
 	{
-		if(CSave.sv.coins > 250)
+		if(CSave.sv.coins >= 250)
 		{
 			car.GetComponent<Renderer>().material.color = new Color(colorRed.value, colorGreen.value, colorBlue.value);
 			CSave.sv.cr = colorRed.value;
