@@ -9,14 +9,22 @@ public class ColorTool : MonoBehaviour
 	public Slider colorBlue;
 	public Image colorPanel;
 	public Text coinsCol;
+	public int index;
 
-	public GameObject car;
+	public int byValue;
+
+	public GameObject[] colorMaterial;
 	public void Start()
 	{
-		colorRed.value = CSave.sv.cr;
-		colorGreen.value = CSave.sv.cg;
-		colorBlue.value = CSave.sv.cb;
+		colorRed.value = CSave.sv.cr[index];
+		colorGreen.value = CSave.sv.cg[index];
+		colorBlue.value = CSave.sv.cb[index];
 		colorUpdate();
+	}
+
+	public void colorm(int i)
+	{
+		index = i;
 	}
 
 	public void colorUpdate()
@@ -26,13 +34,13 @@ public class ColorTool : MonoBehaviour
 
 	public void buyColor()
 	{
-		if(CSave.sv.coins >= 250)
+		if(CSave.sv.coins >= byValue)
 		{
-			car.GetComponent<Renderer>().material.color = new Color(colorRed.value, colorGreen.value, colorBlue.value);
-			CSave.sv.cr = colorRed.value;
-			CSave.sv.cg = colorGreen.value;
-			CSave.sv.cb = colorBlue.value;
-			CSave.sv.coins = CSave.sv.coins - 250;
+			colorMaterial[index].GetComponent<Renderer>().material.color = new Color(colorRed.value, colorGreen.value, colorBlue.value);
+			CSave.sv.cr[index] = colorRed.value;
+			CSave.sv.cg[index] = colorGreen.value;
+			CSave.sv.cb[index] = colorBlue.value;
+			CSave.sv.coins = CSave.sv.coins - byValue;
 			coinsCol.text = CSave.sv.coins.ToString("0");
 			CSave.Save();
 		}

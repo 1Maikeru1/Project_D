@@ -4,17 +4,19 @@ using System.IO;
 
 public class SaveC : MonoBehaviour
 {
-	public GameObject car;
+	public GameObject[] colorcar;
 	public SaveObj sv =new SaveObj();
 	private string patch;
 	
-	private void Start()
+	private void Awake()
 	{
 		patch = Path.Combine(Application.dataPath + "Save.json");
 		if(File.Exists(patch))
 		{
 			sv = JsonUtility.FromJson<SaveObj>(File.ReadAllText(patch));
-			car.GetComponent<Renderer>().material.color = new Color(sv.cr, sv.cg, sv.cb);
+			for (int i=0;i<5;i++){
+				colorcar[i].GetComponent<Renderer>().material.color = new Color(sv.cr[i], sv.cg[i], sv.cb[i]);
+			}
 		}
 	}
 
@@ -32,8 +34,10 @@ public class SaveC : MonoBehaviour
 	public class SaveObj
 	{
 		public int coins;
-		public float cr;
-		public float cg;
-		public float cb;
+		public float[] cr;
+		public float[] cg;
+		public float[] cb;
+		public bool[] buyItem;
+		public bool[] itemActive;
 	}
 }

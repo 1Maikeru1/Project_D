@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Game_Menu : MonoBehaviour
 {
+	[SerializeField] private GameObject[] MenuPanel = new GameObject[2];
 	public float kol;
 	public int coink;
 	public float min = 1;
@@ -17,6 +18,15 @@ public class Game_Menu : MonoBehaviour
 	public SaveC CSave;
 
 
+	public void LookAndSelectMenu(int index)
+	{
+		foreach (GameObject m in MenuPanel)
+		{
+			m.SetActive(false);
+		}
+		MenuPanel[index].SetActive(true);
+	}
+
 	public void BakcMenu()
 	{
 		SceneManager.LoadScene("MainScene");
@@ -27,6 +37,10 @@ public class Game_Menu : MonoBehaviour
 	{
 		SceneManager.LoadScene("SampleScene");
 		Time.timeScale = 1;
+	}
+	public void GameExit()
+	{
+		Application.Quit();
 	}
 
 	void FixedUpdate()

@@ -44,7 +44,6 @@ public class checkPoint : MonoBehaviour
 			{
 				gameMenu.coinKol.text = "0";
 			}
-			
 			gameMenu.CSave.Save();
 		}
 	}

@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1626675187663352972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037214665757138378}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037214665757138378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626675187663352972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.370956, y: -5.6314344, z: 4.47095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5677195215804728892}
+  - {fileID: 8730865853994532684}
+  - {fileID: 8481383029294295257}
+  - {fileID: 7114403578177931005}
+  - {fileID: 4046595610861995944}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4046595610861871192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1037214665757138378}
+    m_Modifications:
+    - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_Name
+      value: Christmas_Ball_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.8379564
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5912037
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.55695
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+--- !u!4 &4046595610861995944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+  m_PrefabInstance: {fileID: 4046595610861871192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5677195215804321932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1037214665757138378}
+    m_Modifications:
+    - target: {fileID: 168756, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_Name
+      value: Christmas_Candy_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.752305
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6824346
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.76795
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2799729
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9600079
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 32.517
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5500001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+--- !u!4 &5677195215804728892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+  m_PrefabInstance: {fileID: 5677195215804321932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7114403578178322287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1037214665757138378}
+    m_Modifications:
+    - target: {fileID: 107174, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_Name
+      value: Christmas_Ball_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.8659563
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.5912037
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.69595
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+--- !u!4 &7114403578177931005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+  m_PrefabInstance: {fileID: 7114403578178322287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8481383029294221031
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1037214665757138378}
+    m_Modifications:
+    - target: {fileID: 163828, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_Name
+      value: Christmas_Ball_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.693014
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6358633
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.656818
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+--- !u!4 &8481383029294295257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 470590, guid: f11f4656aaf62da41838106c00951a0c, type: 3}
+  m_PrefabInstance: {fileID: 8481383029294221031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8730865853994110650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1037214665757138378}
+    m_Modifications:
+    - target: {fileID: 140688, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_Name
+      value: Christmas_Ball_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.848642
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.698538
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.6407
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+--- !u!4 &8730865853994532684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+  m_PrefabInstance: {fileID: 8730865853994110650}
+  m_PrefabAsset: {fileID: 0}

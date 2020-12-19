@@ -15,7 +15,8 @@ public class AxleInfo
 }
 
 public class VCarController : MonoBehaviour
-{
+{	
+	//public bool automatic=false;
 	public AxleInfo [] carAxis = new AxleInfo[2];
 	public WheelCollider [] wheelColliders;
 	public float topSpeed;
@@ -26,7 +27,7 @@ public class VCarController : MonoBehaviour
 	public float steerHelp = 0;
 	public float KPH;
 
-	private float wheelsRPM, lastValue, totalPower;
+	private float wheelsRPM = 0, lastValue = 0, totalPower = 0;
 	public float maxRPM , minRPM;
 	public float[] gears;
 	public float[] gearChangeSpeed;
@@ -81,8 +82,8 @@ public class VCarController : MonoBehaviour
 			}
 			if (axle.motor)
 			{
-				axle.leftWheel.motorTorque = topSpeed * verInput;
-				axle.rightWheel.motorTorque = topSpeed * verInput;
+				axle.leftWheel.motorTorque = totalPower/2;
+				axle.rightWheel.motorTorque = totalPower/2;
 			}
 			if (brakeBtn)
 			{
@@ -137,7 +138,7 @@ public class VCarController : MonoBehaviour
 		if(KPH > minSpeedForSmoke)
 		{
 			float angle = Quaternion.Angle(Quaternion.LookRotation(rb.velocity, Vector3.up), Quaternion.LookRotation(transform.forward, Vector3.up));
-			if(angle > minAngleForSmoke && angle < 110) //if(angle > minAngleForSmoke && angle < 160 && onGround) - некорректно работает!!!
+			if(angle > minAngleForSmoke && angle < 110 && wheelColliders[3].isGrounded && wheelColliders[2].isGrounded) //onGround - некорректно работает!!!
 			{
 				SwithSmokeParticles(true);
 			}
@@ -158,6 +159,7 @@ public class VCarController : MonoBehaviour
 		{
 			ParticleSystem.EmissionModule psEm = ps.emission;
 			psEm.enabled = _enable;
+			rb.AddForce(transform.forward * (KPH / 400) * 4000);
 		}
 	}
 
@@ -214,13 +216,15 @@ public class VCarController : MonoBehaviour
 	private void shifter()
 	{
 		if(!onGround)return;
-			//automatic
-		if(engineRPM > maxRPM && gearNum < gears.Length-1 && !reverse && checkGears() ){
+
+		//automatic
+		if(engineRPM > maxRPM && gearNum < gears.Length-1 && !reverse && checkGears() )
+		{
 			gearNum ++;
 		}
-		if(engineRPM < minRPM && gearNum > 0){
+		if(engineRPM < minRPM && gearNum > 0)
+		{
 			gearNum --;
 		}
-
 	}
 }
